@@ -1,0 +1,137 @@
+/* General Style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold; /* Bold text throughout the site */
+}
+
+/* Boxed Layout for Each Section */
+section, header, footer {
+    background-color: #fff; /* White background for clarity */
+    margin: 20px;
+    border-radius: 10px; /* Rounded corners for aesthetic */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 40px; /* Uniform padding */
+    position: relative; /* Required for absolute positioning within sections */
+}
+
+/* Header Style with Background Image */
+header {
+    background-image: url('header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8em; /* Slightly smaller for balance */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Dark overlay for text contrast */
+    border-radius: 10px; /* Rounded corners */
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    background-color: rgba(116, 238, 128, 0.75); /* Lighter, semi-transparent green */
+    padding: 5px 0; /* Reduced padding for a slimmer appearance */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Reduced gap between links */
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em; /* Smaller font size for a more compact look */
+    padding: 5px 8px; /* Adjusted padding for clickable area */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: #77ee996b; /* Lighter green on hover */
+    border-radius: 5px;
+}
+
+/* Ensure no overlap of header overlay affects clickability */
+header::before {
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjusting the transparency for better header visibility */
+}
+
+/* Apply reset to ensure navigation is clickable */
+header::before {
+    pointer-events: none; /* Ensures clicks pass through to links below */
+}
+
+
+/* Text Sections Styling */
+section {
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px; /* Slightly smaller for better readability */
+    margin: auto;
+}
+
+/* Headings and Text Enhancement */
+section h2 {
+    color: #795548;
+    font-size: 1.6em; /* Clearer and more prominent */
+}
+
+section div {
+    color: #333;
+    font-size: 1.1em; /* Optimized for readability */
+    margin-bottom: 20px; /* More space between entries */
+}
+
+/* Projects and Skills Background */
+.projects, .skills {
+    background-color: #e0f2f1;
+}
+
+/* Resume Section */
+#resume a {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#resume a:hover {
+    background-color: #388E3C;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #FFFDE7;
+}
+
+/* Footer Style */
+footer {
+    background-color: #795548;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
